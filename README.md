@@ -2,22 +2,21 @@
 
 Material Design Ripple effect in pure JS & CSS.
 
-## demo
+## Demo
 
 [click me](http://dai-siki.github.io/js-effect-ripple/example/demo.html).
 
 
-## screenshot
+## Screenshot
 
 ![screenshot](screenshot.gif)
 
 
-## evn
+## Evn
+webpack + babel + scss
 
-模块使用es6编写（需babel转译），css使用scss编译（需scss-loader转译）。
 
-
-## install
+## Install
 
 #### npm
 
@@ -26,24 +25,29 @@ $ npm install js-effect-ripple
 ```
 
 
-## 使用
-
-参考示例。
-
-#### 示例
+## Usage
 
 ```html
 
 <style>
 	#ripple_btn{
 		position: relative;
+		display: block;
+		width: 200px;
+		height: 50px;
+		border: none;
+		outline: none;
+		border-radius: 6px;
 		overflow: hidden;
-		background-color: #f00;
+		background-color: #f55;
+		color: #fff;
+		font-size: 20px;
+		cursor: pointer;
 	}
 </style>
 
 <div>
-	<button id="ripple_btn" type="button" name="button">let's go</button>
+	<button id="ripple_btn" type="button" name="button">submit</button>
 </div>
 
 <script>
