@@ -58,7 +58,7 @@ gulp.task('js', function() {
 
 gulp.task('serve', function() {
 	gulp.watch([
-		'./example/demo.js', './*.vue', './scss/*.scss'
+		'./example/demo.js', './src/*.js', './src/*.scss'
 	], ['js']);
 	gulp.watch(['./scss/*.scss'], ['css']);
 });

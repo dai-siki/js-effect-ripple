@@ -1,6 +1,6 @@
 {
   "name": "js-effect-ripple",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Material Design Ripple effect in pure JS & CSS",
   "main": "src/ripple.js",
   "scripts": {
