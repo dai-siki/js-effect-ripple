@@ -142,7 +142,7 @@
 
 
 	// module
-	exports.push([module.id, "@keyframes ripple {\n  from {\n    opacity: 1;\n    transform: scale(0); }\n  to {\n    transform: scale(2);\n    opacity: 0; } }\n\n.e-ripple {\n  position: absolute;\n  background: rgba(0, 0, 0, 0.15);\n  border-radius: 100%;\n  transform: scale(0);\n  pointer-events: none; }\n  .e-ripple.show {\n    animation: ripple 0.75s ease-out; }\n", ""]);
+	exports.push([module.id, "@keyframes e-ripple {\n  from {\n    opacity: 1;\n    transform: scale(0); }\n  to {\n    transform: scale(2);\n    opacity: 0; } }\n\n.e-ripple {\n  position: absolute;\n  background: rgba(0, 0, 0, 0.15);\n  border-radius: 100%;\n  transform: scale(0);\n  pointer-events: none; }\n  .e-ripple.show {\n    animation: e-ripple 0.6s ease-out; }\n", ""]);
 
 	// exports
 

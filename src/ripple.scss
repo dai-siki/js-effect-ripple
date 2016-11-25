@@ -1,5 +1,5 @@
 // 波纹效果
-@keyframes ripple {
+@keyframes e-ripple {
     from {
         opacity: 1;
         transform: scale(0);
@@ -19,6 +19,6 @@
     pointer-events: none;
 
     &.show {
-        animation: ripple 0.75s ease-out;
+        animation: e-ripple 0.6s ease-out;
     }
 }
