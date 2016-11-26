@@ -59,10 +59,20 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var ripple_btn = document.getElementById('ripple_btn');
+	var btn1 = document.getElementById('btn1'),
+	    btn2 = document.getElementById('btn2'),
+	    btn3 = document.getElementById('btn3');
 
-	ripple_btn.addEventListener('click', function (e) {
+	btn1.addEventListener('click', function (e) {
 		(0, _ripple2.default)(e);
+	});
+
+	btn2.addEventListener('click', function (e) {
+		(0, _ripple2.default)(e, '', '#f00');
+	});
+
+	btn3.addEventListener('click', function (e) {
+		(0, _ripple2.default)(e, 'center', '#005');
 	});
 
 /***/ },
@@ -75,34 +85,34 @@
 		value: true
 	});
 
-	exports.default = function (e) {
+	exports.default = function (e, type, bgc) {
 		var target = e.target;
-		if (e.type.toLowerCase() !== 'click') {
+		if (e.type.toLowerCase() == 'click' || e.type.toLowerCase() == 'touch') {
+			var rect = target.getBoundingClientRect(),
+			    ripple = target.querySelector('.e-ripple');
+			if (!ripple) {
+				ripple = document.createElement('span');
+				ripple.className = 'e-ripple';
+				ripple.style.height = ripple.style.width = Math.max(rect.width, rect.height) + 'px';
+				target.appendChild(ripple);
+			} else {
+				ripple.className = 'e-ripple';
+			}
+			switch (type) {
+				case 'center':
+					ripple.style.top = rect.width / 2 - ripple.offsetHeight / 2 + 'px';
+					ripple.style.left = rect.height / 2 - ripple.offsetWidth / 2 + 'px';
+					break;
+				default:
+					ripple.style.top = e.pageY - rect.top - ripple.offsetHeight / 2 - document.body.scrollTop + 'px';
+					ripple.style.left = e.pageX - rect.left - ripple.offsetWidth / 2 - document.body.scrollLeft + 'px';
+			}
+			if (bgc) {
+				ripple.style.backgroundColor = bgc;
+			}
+			ripple.className = 'e-ripple z-active';
 			return false;
 		}
-		var rect = target.getBoundingClientRect(),
-		    ripple = target.querySelector('.e-ripple');
-		if (!ripple) {
-			ripple = document.createElement('span');
-			ripple.className = 'e-ripple';
-			ripple.style.height = ripple.style.width = Math.max(rect.width, rect.height) + 'px';
-			target.appendChild(ripple);
-		}
-		if (ripple.classList) {
-			ripple.classList.remove('show');
-		} else {
-			ripple.className = 'e-ripple';
-		}
-		var top = e.pageY - rect.top - ripple.offsetHeight / 2 - document.body.scrollTop,
-		    left = e.pageX - rect.left - ripple.offsetWidth / 2 - document.body.scrollLeft;
-		ripple.style.top = top + 'px';
-		ripple.style.left = left + 'px';
-		if (ripple.classList) {
-			ripple.classList.add('show');
-		} else {
-			ripple.className = 'e-ripple show';
-		}
-		return false;
 	};
 
 	__webpack_require__(3);
@@ -142,7 +152,7 @@
 
 
 	// module
-	exports.push([module.id, "@keyframes e-ripple {\n  from {\n    opacity: 1;\n    transform: scale(0); }\n  to {\n    transform: scale(2);\n    opacity: 0; } }\n\n.e-ripple {\n  position: absolute;\n  background: rgba(0, 0, 0, 0.15);\n  border-radius: 100%;\n  transform: scale(0);\n  pointer-events: none; }\n  .e-ripple.show {\n    animation: e-ripple 0.6s ease-out; }\n", ""]);
+	exports.push([module.id, ".e-ripple {\n  position: absolute;\n  border-radius: 100%;\n  background-color: #000;\n  background-clip: padding-box;\n  pointer-events: none;\n  user-select: none;\n  transform: scale(0);\n  opacity: 0.15; }\n  .e-ripple.z-active {\n    opacity: 0;\n    transform: scale(2);\n    transition: opacity 1.2s ease-out, transform 0.6s ease-out; }\n", ""]);
 
 	// exports
 

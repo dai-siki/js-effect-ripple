@@ -1,7 +1,17 @@
 import effectRipple from '../src/ripple';
 
-let ripple_btn = document.getElementById('ripple_btn');
+let btn1 = document.getElementById('btn1'),
+	btn2 = document.getElementById('btn2'),
+	btn3 = document.getElementById('btn3');
 
-ripple_btn.addEventListener('click', function (e) {
+btn1.addEventListener('click', function (e) {
 	effectRipple(e);
+});
+
+btn2.addEventListener('click', function (e) {
+	effectRipple(e,'','#f00');
+});
+
+btn3.addEventListener('click', function (e) {
+	effectRipple(e,'center','#005');
 });

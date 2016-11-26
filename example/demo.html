@@ -15,26 +15,59 @@
 			padding: 50px;
 		}
 
-		#ripple_btn{
+		div {
+			position: relative;
+		}
+
+		button {
 			position: relative;
 			display: block;
 			width: 200px;
 			height: 50px;
+			line-height: 50px;
+			margin-bottom: 20px;
 			border: none;
 			outline: none;
-			border-radius: 6px;
+			border-radius: 2px;
 			overflow: hidden;
 			background-color: #f55;
 			color: #fff;
 			font-size: 20px;
 			cursor: pointer;
+			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
+		}
+
+		button:hover {
+			box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+		}
+
+		button:active {
+			box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.23);
+		}
+
+		#btn2 {
+			background-color: #fff;
+			color: #666;
+		}
+
+		#btn3 {
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 18px;
+			border-radius: 50%;
+			background-color: #fff;
+			color: #666;
+			overflow: visible;
 		}
 	</style>
 </head>
 
 <body>
 	<div>
-		<button id="ripple_btn" type="button" name="button">submit</button>
+		<button id="btn1" type="button" name="button">submit</button>
+		<button id="btn2" type="button" name="button">submit</button>
+		<button id="btn3" type="button" name="button">+</button>
 	</div>
 
 	<script src="demo-src.js"></script>
