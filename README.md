@@ -1,15 +1,10 @@
 # js-effect-ripple
 
-Material Design Ripple effect in pure JS & CSS.
+Material Design Ripple effect in pure JS & CSS.[demo](http://dai-siki.github.io/js-effect-ripple/example/demo.html).
 
 ## Demo
 
 [click me](http://dai-siki.github.io/js-effect-ripple/example/demo.html).
-
-
-## Screenshot
-
-![screenshot](screenshot.gif)
 
 
 ## Evn
@@ -30,6 +25,21 @@ $ npm install js-effect-ripple
 ```html
 
 <style>
+	* {
+		margin: 0;
+		padding: 0;
+		-webkit-tap-highlight-color: transparent;
+		-webkit-appearance:none;
+	}
+
+	body {
+		padding: 50px;
+	}
+
+	div {
+		position: relative;
+	}
+
 	button {
 		position: relative;
 		display: block;
@@ -46,6 +56,7 @@ $ npm install js-effect-ripple
 		font-size: 20px;
 		cursor: pointer;
 		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
+		user-select: none;
 	}
 
 	button:hover {
@@ -71,12 +82,23 @@ $ npm install js-effect-ripple
 		color: #666;
 		overflow: visible;
 	}
+
+	#btn4 {
+		width: 56px;
+		height: 56px;
+		line-height: 56px;
+		border-radius: 50%;
+		background-color: #086;
+		font-size: 24px;
+		color: #fff;
+	}
 </style>
 
 <div>
 	<button id="btn1" type="button" name="button">submit</button>
 	<button id="btn2" type="button" name="button">submit</button>
 	<button id="btn3" type="button" name="button">+</button>
+	<button id="btn4" type="button" name="button">+</button>
 </div>
 
 <script>
@@ -84,7 +106,8 @@ $ npm install js-effect-ripple
 
 	let btn1 = document.getElementById('btn1'),
 		btn2 = document.getElementById('btn2'),
-		btn3 = document.getElementById('btn3');
+		btn3 = document.getElementById('btn3'),
+		btn4 = document.getElementById('btn4');
 
 	btn1.addEventListener('click', function (e) {
 		effectRipple(e);
@@ -96,6 +119,10 @@ $ npm install js-effect-ripple
 
 	btn3.addEventListener('click', function (e) {
 		effectRipple(e,'center','#005');
+	});
+
+	btn4.addEventListener('click', function (e) {
+		effectRipple(e,'center');
 	});
 </script>
 

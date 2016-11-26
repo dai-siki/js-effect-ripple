@@ -61,7 +61,8 @@
 
 	var btn1 = document.getElementById('btn1'),
 	    btn2 = document.getElementById('btn2'),
-	    btn3 = document.getElementById('btn3');
+	    btn3 = document.getElementById('btn3'),
+	    btn4 = document.getElementById('btn4');
 
 	btn1.addEventListener('click', function (e) {
 		(0, _ripple2.default)(e);
@@ -73,6 +74,10 @@
 
 	btn3.addEventListener('click', function (e) {
 		(0, _ripple2.default)(e, 'center', '#005');
+	});
+
+	btn4.addEventListener('click', function (e) {
+		(0, _ripple2.default)(e, 'center');
 	});
 
 /***/ },
