@@ -28,7 +28,6 @@ $ npm install js-effect-ripple
 	* {
 		margin: 0;
 		padding: 0;
-		-webkit-tap-highlight-color: transparent;
 		-webkit-appearance:none;
 	}
 
@@ -57,6 +56,8 @@ $ npm install js-effect-ripple
 		cursor: pointer;
 		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
 		user-select: none;
+		-webkit-tap-highlight-color: transparent;/*此处为了解决谷歌手机浏览器触摸后按钮带有一层阴影的碍事效果*/
+		transform: rotate(0deg); /*此处为了解决谷歌浏览器子元素使用transform元素，父元素圆角溢出无效的bug。无奈火狐依然存在*/
 	}
 
 	button:hover {
