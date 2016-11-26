@@ -1,6 +1,6 @@
 # js-effect-ripple
 
-Material Design Ripple effect in pure JS & CSS.[demo](http://dai-siki.github.io/js-effect-ripple/example/demo.html).
+Material Design Ripple effect in pure JS & CSS
 
 ## Demo
 
