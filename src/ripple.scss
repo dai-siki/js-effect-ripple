@@ -3,12 +3,12 @@
 .e-ripple {
     position: absolute;
     border-radius: 100%;
-	background-color: #000;
+	background-color: rgba(0, 0, 0, 0.15);
 	background-clip: padding-box;
 	pointer-events: none;
 	user-select: none;
 	transform: scale(0);
-	opacity: 0.15;
+	opacity: 1;
 
     &.z-active {
 		opacity: 0;

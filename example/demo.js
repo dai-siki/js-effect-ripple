@@ -11,20 +11,20 @@ btn1.addEventListener('click', function (e) {
 });
 
 btn2.addEventListener('click', function (e) {
-	effectRipple(e, {bgc: '#800'});
+	effectRipple(e, {bgc: 'rgba(0, 100, 150, 0.3)'});
 });
 
 btn3.addEventListener('click', function (e) {
-	effectRipple(e, {type: 'center', bgc: '#800'});
+	effectRipple(e, {type: 'center'});
 });
 
 btn4.addEventListener('click', function (e) {
-	effectRipple(e, {type: 'center', bgc: '#800'});
+	effectRipple(e, {type: 'center', bgc: 'rgba(255, 255, 255, 0.4)'});
 });
 
 btn5.addEventListener('click', function (e) {
-	effectRipple(e, {ele: btn1, type: 'center', bgc: '#008'});
-	effectRipple(e, {ele: btn2, type: 'center', bgc: '#008'});
-	effectRipple(e, {ele: btn3, type: 'center', bgc: '#008'});
-	effectRipple(e, {ele: btn4, type: 'center', bgc: '#008'});
+	effectRipple(e, {ele: btn1, type: 'center'});
+	effectRipple(e, {ele: btn2, type: 'center'});
+	effectRipple(e, {ele: btn3, type: 'center'});
+	effectRipple(e, {ele: btn4, type: 'center', bgc: 'rgba(255, 255, 255, 0.3)'});
 });

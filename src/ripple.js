@@ -7,7 +7,7 @@ export default function(e, arg_opts) {
 	let opts = Object.assign({
 			ele: e.target, // 波纹作用元素
 			type: 'hit', // hit点击位置扩散　center中心点扩展
-			bgc: '#000' // 波纹颜色
+			bgc: 'rgba(0, 0, 0, 0.15)' // 波纹颜色
 		}, arg_opts),
 		target = opts.ele;
 	if(target) {

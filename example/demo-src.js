@@ -70,22 +70,22 @@
 	});
 
 	btn2.addEventListener('click', function (e) {
-		(0, _ripple2.default)(e, { bgc: '#800' });
+		(0, _ripple2.default)(e, { bgc: 'rgba(0, 100, 150, 0.3)' });
 	});
 
 	btn3.addEventListener('click', function (e) {
-		(0, _ripple2.default)(e, { type: 'center', bgc: '#800' });
+		(0, _ripple2.default)(e, { type: 'center' });
 	});
 
 	btn4.addEventListener('click', function (e) {
-		(0, _ripple2.default)(e, { type: 'center', bgc: '#800' });
+		(0, _ripple2.default)(e, { type: 'center', bgc: 'rgba(255, 255, 255, 0.4)' });
 	});
 
 	btn5.addEventListener('click', function (e) {
-		(0, _ripple2.default)(e, { ele: btn1, type: 'center', bgc: '#008' });
-		(0, _ripple2.default)(e, { ele: btn2, type: 'center', bgc: '#008' });
-		(0, _ripple2.default)(e, { ele: btn3, type: 'center', bgc: '#008' });
-		(0, _ripple2.default)(e, { ele: btn4, type: 'center', bgc: '#008' });
+		(0, _ripple2.default)(e, { ele: btn1, type: 'center' });
+		(0, _ripple2.default)(e, { ele: btn2, type: 'center' });
+		(0, _ripple2.default)(e, { ele: btn3, type: 'center' });
+		(0, _ripple2.default)(e, { ele: btn4, type: 'center', bgc: 'rgba(255, 255, 255, 0.3)' });
 	});
 
 /***/ },
@@ -106,7 +106,7 @@
 		var opts = (0, _assign2.default)({
 			ele: e.target, // 波纹作用元素
 			type: 'hit', // hit点击位置扩散　center中心点扩展
-			bgc: '#000' // 波纹颜色
+			bgc: 'rgba(0, 0, 0, 0.15)' // 波纹颜色
 		}, arg_opts),
 		    target = opts.ele;
 		if (target) {
@@ -679,7 +679,7 @@
 
 
 	// module
-	exports.push([module.id, ".e-ripple {\n  position: absolute;\n  border-radius: 100%;\n  background-color: #000;\n  background-clip: padding-box;\n  pointer-events: none;\n  user-select: none;\n  transform: scale(0);\n  opacity: 0.15; }\n  .e-ripple.z-active {\n    opacity: 0;\n    transform: scale(2);\n    transition: opacity 1.2s ease-out, transform 0.6s ease-out; }\n", ""]);
+	exports.push([module.id, ".e-ripple {\n  position: absolute;\n  border-radius: 100%;\n  background-color: rgba(0, 0, 0, 0.15);\n  background-clip: padding-box;\n  pointer-events: none;\n  user-select: none;\n  transform: scale(0);\n  opacity: 1; }\n  .e-ripple.z-active {\n    opacity: 0;\n    transform: scale(2);\n    transition: opacity 1.2s ease-out, transform 0.6s ease-out; }\n", ""]);
 
 	// exports
 
