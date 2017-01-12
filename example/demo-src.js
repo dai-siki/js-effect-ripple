@@ -65,7 +65,7 @@
 	    btn4 = document.getElementById('btn4'),
 	    btn5 = document.getElementById('btn5');
 
-	btn1.addEventListener('click', function (e) {
+	btn1.addEventListener('touchstart', function (e) {
 		(0, _ripple2.default)(e);
 	});
 
@@ -126,8 +126,8 @@
 					ripple.style.left = rect.width / 2 - ripple.offsetWidth / 2 + 'px';
 					break;
 				default:
-					ripple.style.top = e.pageY - rect.top - ripple.offsetHeight / 2 - document.body.scrollTop + 'px';
-					ripple.style.left = e.pageX - rect.left - ripple.offsetWidth / 2 - document.body.scrollLeft + 'px';
+					ripple.style.top = (e.pageY || e.targetTouches[0].pageY) - rect.top - ripple.offsetHeight / 2 - document.body.scrollTop + 'px';
+					ripple.style.left = (e.pageX || e.targetTouches[0].pageX) - rect.left - ripple.offsetWidth / 2 - document.body.scrollLeft + 'px';
 			}
 			ripple.style.backgroundColor = opts.bgc;
 			ripple.className = 'e-ripple z-active';
@@ -679,7 +679,7 @@
 
 
 	// module
-	exports.push([module.id, ".e-ripple {\n  position: absolute;\n  border-radius: 100%;\n  background-color: rgba(0, 0, 0, 0.15);\n  background-clip: padding-box;\n  pointer-events: none;\n  user-select: none;\n  transform: scale(0);\n  opacity: 1; }\n  .e-ripple.z-active {\n    opacity: 0;\n    transform: scale(2);\n    transition: opacity 1.2s ease-out, transform 0.6s ease-out; }\n", ""]);
+	exports.push([module.id, ".e-ripple {\n  position: absolute;\n  border-radius: 100%;\n  background-color: rgba(0, 0, 0, 0.15);\n  background-clip: padding-box;\n  pointer-events: none;\n  user-select: none;\n  transform: scale(0);\n  opacity: 1;\n  perspective: 1000;\n  backface-visibility: hidden; }\n  .e-ripple.z-active {\n    opacity: 0;\n    transform: scale(2);\n    transition: opacity 1.2s ease-out, transform 0.6s ease-out; }\n", ""]);
 
 	// exports
 

@@ -6,7 +6,7 @@ let btn1 = document.getElementById('btn1'),
 	btn4 = document.getElementById('btn4'),
 	btn5 = document.getElementById('btn5');
 
-btn1.addEventListener('click', function (e) {
+btn1.addEventListener('touchstart', function (e) {
 	effectRipple(e);
 });
 
